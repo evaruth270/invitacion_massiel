@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 💫 Fondo */
+body {
+  background: url('fondo_tinkerbell.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  padding-left: 6%;
+  padding-right: 6%;
+  overflow: hidden;
+}
+
+/* 🎀 Tarjeta mágica */
+.tarjeta {
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 25px;
+  padding: 30px 40px;
+  color: #fff;
+  width: 380px;
+  text-align: left;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+  animation: flotar 3s ease-in-out infinite alternate;
+  z-index: 2;
+}
+
+@keyframes flotar {
+  from { transform: translateY(0px); }
+  to { transform: translateY(-8px); }
+}
+
+/* ✨ Títulos */
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  color: #fff8dc;
+  text-shadow: 0 0 25px #ffda79, 0 0 10px #fff;
+  animation: brillar 3s infinite alternate;
+}
+
+h2 {
+  color: #aef1c2;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px #d6ffd6;
+}
+
+@keyframes brillar {
+  from { text-shadow: 0 0 10px #ffb6c1; }
+  to { text-shadow: 0 0 25px #fff; }
+}
+
+/* 🌟 Texto */
+p {
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+.mensaje {
+  margin-top: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-style: italic;
+}
+
+/* 🌸 Botón música */
+.boton-musica {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+button {
+  background: linear-gradient(135deg, #a4e6c3, #f8b3d0);
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0 15px #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #ffb6c1;
+}
+
+/* 🌠 Estrellitas cayendo */
+@keyframes caerEstrellas {
+  0% {
+    transform: translateY(-10px) scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(100vh) scale(1);
+    opacity: 1;
+  }
+}
+
+.estrellita {
+  position: fixed;
+  top: -10px;
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, #fff, transparent);
+  border-radius: 50%;
+  animation: caerEstrellas linear infinite;
+  z-index: 0;
+}
+
+/* 🌈 Responsivo (celulares) */
+@media (max-width: 768px) {
+  body {
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .tarjeta {
+    width: 90%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.65);
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .mensaje {
+    font-size: 0.95rem;
+  }
+}
