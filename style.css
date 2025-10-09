@@ -8,7 +8,7 @@
 
 /* 💫 Fondo */
 body {
-  background: url('fondo_tinkerbell.jpeg') no-repeat center center fixed;
+  background: url('fondo_tinkerbell.webp') no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
   font-family: 'Poppins', sans-serif;
